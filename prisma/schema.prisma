@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Clinic {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  address      String
+  barrio       String
+  phone        String
+  email        String?
+  website      String?
+  description  String?
+  imageUrl     String?
+  hours        Json
+  specialties  String[]
+  animalTypes  String[]
+  languages    String[]
+  rating       Float    @default(0)
+  reviewCount  Int      @default(0)
+  price        Int
+  isEmergency  Boolean  @default(false)
+  lat          Float?
+  lng          Float?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  reviews      Review[]
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  clinicId  String
+  clinic    Clinic   @relation(fields: [clinicId], references: [id], onDelete: Cascade)
+  author    String
+  rating    Int
+  comment   String
+  date      DateTime @default(now())
+  helpful   Int      @default(0)
+}
