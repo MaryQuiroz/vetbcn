@@ -37,7 +37,7 @@ export default function DirectionsPanel({
   ];
 
   return (
-    <div className="mt-4 rounded-xl border border-blue-100 bg-white p-4 shadow-md">
+    <div className="mt-4 rounded-xl border border-blue-100 bg-white p-3 sm:p-4 shadow-md">
       <div className="mb-3 flex items-center justify-between">
         <h3 className="text-sm font-semibold text-gray-900">Como llegar</h3>
         <button
@@ -70,14 +70,14 @@ export default function DirectionsPanel({
         </div>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex flex-col gap-2 sm:flex-row">
         {apps.map(({ name, url, className }) => (
           <a
             key={name}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex-1 rounded-lg px-2 py-2 text-center text-xs font-medium transition-colors ${className}`}
+            className={`flex-1 rounded-lg px-2 py-2.5 text-center text-xs font-medium transition-colors ${className}`}
           >
             {name}
           </a>
