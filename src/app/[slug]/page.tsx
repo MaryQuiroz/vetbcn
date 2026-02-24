@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getClinics, getClinicBySlug, getRelatedClinics, getReviews } from "@/lib/clinics";
+import { getClinicBySlug, getRelatedClinics, getReviews } from "@/lib/clinics";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StarRating from "@/components/StarRating";
@@ -16,10 +16,7 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  const clinics = await getClinics();
-  return clinics.map((clinic) => ({ slug: clinic.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
