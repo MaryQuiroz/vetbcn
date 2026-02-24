@@ -17,6 +17,22 @@ VetBCN is a full-stack web application that helps pet owners in Barcelona find v
 
 ---
 
+## Screenshots
+
+### Listado de clínicas (desktop)
+
+![Listado de clínicas veterinarias de Barcelona](./public/screenshots/home.png)
+
+### Detalle de clínica
+
+![Detalle con mapa, horarios y valoraciones](./public/screenshots/clinic-detail.png)
+
+### Vista móvil
+
+![Vista móvil responsive](./public/screenshots/home-mobile.png)
+
+---
+
 ## Features
 
 - **Interactive Map** — Leaflet-powered map with clickable clinic markers across Barcelona
