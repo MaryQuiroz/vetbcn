@@ -89,13 +89,13 @@ export default function HomeContent({ clinics }: Props) {
           <div className="flex overflow-hidden rounded-lg border border-gray-200 shadow-sm">
             <button
               onClick={() => setView("list")}
-              className={`px-3 py-2 text-sm font-medium transition-colors ${view === "list" ? "bg-teal-700 text-white" : "bg-white text-gray-600 hover:bg-gray-50"}`}
+              className={`px-3 py-2.5 text-sm font-medium transition-colors ${view === "list" ? "bg-teal-700 text-white" : "bg-white text-gray-600 hover:bg-gray-50"}`}
             >
               📋 Lista
             </button>
             <button
               onClick={() => setView("map")}
-              className={`border-l border-gray-200 px-3 py-2 text-sm font-medium transition-colors ${view === "map" ? "bg-teal-700 text-white" : "bg-white text-gray-600 hover:bg-gray-50"}`}
+              className={`border-l border-gray-200 px-3 py-2.5 text-sm font-medium transition-colors ${view === "map" ? "bg-teal-700 text-white" : "bg-white text-gray-600 hover:bg-gray-50"}`}
             >
               🗺️ Mapa
             </button>
@@ -110,7 +110,7 @@ export default function HomeContent({ clinics }: Props) {
         onSorted={(_, lat, lng) => { setUserLat(lat); setUserLng(lng); }}
       />
 
-      <div className="flex gap-8">
+      <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
         <FilterSidebar />
         <div className="min-w-0 flex-1">
           {view === "map" ? (

@@ -31,11 +31,11 @@ export default function ReviewList({
         Valoraciones ({totalCount})
       </h2>
 
-      <div className="mt-4 grid gap-8 lg:grid-cols-[280px_1fr]">
+      <div className="mt-4 grid gap-4 sm:gap-6 lg:gap-8 lg:grid-cols-[280px_1fr]">
         {/* Rating summary */}
         <div className="space-y-3">
           <div className="flex items-baseline gap-2">
-            <p className="text-5xl font-bold text-gray-900">
+            <p className="text-4xl font-bold text-gray-900 sm:text-5xl">
               {averageRating.toFixed(1)}
             </p>
             <span className="text-lg text-amber-400">
@@ -47,7 +47,7 @@ export default function ReviewList({
             {totalCount} valoraciones
           </p>
 
-          <div className="space-y-1.5">
+          <div className="space-y-1 sm:space-y-1.5">
             {distribution.map(({ star, count }) => {
               const pct = totalCount > 0 ? (count / totalCount) * 100 : 0;
               return (

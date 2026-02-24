@@ -59,7 +59,7 @@ export default function GeoSortBar({ clinics, sortBy, onSortChange, onSorted }: 
       <button
         onClick={hasLocation ? undefined : requestLocation}
         disabled={loading}
-        className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+        className={`flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium transition-colors ${
           hasLocation
             ? "bg-teal-100 text-teal-700 cursor-default"
             : "bg-white border border-gray-200 text-gray-600 hover:border-teal-400 hover:text-teal-700"
@@ -75,13 +75,13 @@ export default function GeoSortBar({ clinics, sortBy, onSortChange, onSorted }: 
 
       {/* Sort pills */}
       <div className="flex items-center gap-1.5">
-        <span className="text-xs text-gray-400">Ordenar:</span>
+        <span className="hidden text-xs text-gray-400 sm:inline">Ordenar:</span>
         {SORT_OPTIONS.map(({ value, label }) => (
           <button
             key={value}
             onClick={() => onSortChange(value)}
             disabled={value === "distance" && !hasLocation}
-            className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
               sortBy === value
                 ? "bg-teal-700 text-white"
                 : value === "distance" && !hasLocation

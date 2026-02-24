@@ -52,7 +52,7 @@ function SearchBarInner({ initialValue }: { initialValue: string }) {
         value={value}
         onChange={(e) => updateSearch(e.target.value)}
         placeholder="Busca por nombre, especialidad o barrio..."
-        className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-10 pr-10 text-gray-900 shadow-sm placeholder:text-gray-400 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
+        className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-10 pr-10 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20 sm:text-sm"
       />
       {value && (
         <button

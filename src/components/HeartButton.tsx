@@ -11,7 +11,7 @@ export default function HeartButton({ clinicId, className = "" }: Props) {
     <button
       onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggle(clinicId); }}
       aria-label={fav ? "Quitar de favoritos" : "Añadir a favoritos"}
-      className={`rounded-full bg-white/90 p-1.5 shadow-sm backdrop-blur-sm transition-all active:scale-110 ${fav ? "text-red-500" : "text-gray-400 hover:text-red-400"} ${className}`}
+      className={`rounded-full bg-white/90 p-2 shadow-sm backdrop-blur-sm transition-all active:scale-110 ${fav ? "text-red-500" : "text-gray-400 hover:text-red-400"} ${className}`}
     >
       {fav ? (
         <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">

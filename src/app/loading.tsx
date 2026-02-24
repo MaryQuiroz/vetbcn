@@ -10,7 +10,7 @@ export default function Loading() {
       </div>
 
       {/* Hero skeleton */}
-      <div className="bg-gradient-to-b from-teal-50 to-white px-4 py-12 text-center sm:py-16">
+      <div className="bg-gradient-to-b from-teal-50 to-white px-4 py-10 text-center sm:py-16">
         <div className="mx-auto h-10 w-64 animate-pulse rounded bg-gray-200" />
         <div className="mx-auto mt-4 h-10 w-80 animate-pulse rounded bg-gray-200" />
         <div className="mx-auto mt-6 h-12 w-full max-w-2xl animate-pulse rounded-lg bg-gray-200" />
@@ -25,7 +25,7 @@ export default function Loading() {
               key={i}
               className="overflow-hidden rounded-lg bg-white shadow-sm"
             >
-              <div className="h-40 animate-pulse bg-gray-200" />
+              <div className="h-36 animate-pulse bg-gray-200 sm:h-40" />
               <div className="space-y-2 p-4">
                 <div className="h-5 w-3/4 animate-pulse rounded bg-gray-200" />
                 <div className="h-4 w-1/2 animate-pulse rounded bg-gray-200" />

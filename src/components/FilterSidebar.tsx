@@ -108,7 +108,7 @@ export default function FilterSidebar() {
             <button
               key={label}
               onClick={() => updateParams("animal", label, true)}
-              className={`rounded-full border px-3 py-1 text-sm transition-colors ${
+              className={`rounded-full border px-3 py-1.5 text-sm transition-colors ${
                 selectedAnimals.includes(label)
                   ? "border-teal-600 bg-teal-50 text-teal-700"
                   : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
@@ -134,7 +134,7 @@ export default function FilterSidebar() {
             }
             router.push(`/?${params.toString()}`);
           }}
-          className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
+          className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-700 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20"
         >
           <option value="">Todos los barrios</option>
           {BARRIOS.map((barrio) => (
@@ -205,7 +205,7 @@ export default function FilterSidebar() {
       {/* Limpiar */}
       <button
         onClick={clearAll}
-        className="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-50"
+        className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-600 transition-colors hover:bg-gray-50"
       >
         Limpiar filtros
       </button>
@@ -218,7 +218,7 @@ export default function FilterSidebar() {
       <div className="lg:hidden">
         <button
           onClick={() => setOpen(!open)}
-          className="mb-4 flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+          className="mb-4 flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
         >
           <span>🎛️</span> Filtros
           {open ? " ▲" : " ▼"}

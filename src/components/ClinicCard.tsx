@@ -29,7 +29,7 @@ export default function ClinicCard({ clinic }: ClinicCardProps) {
 
       <Link href={`/${clinic.slug}`} className="block">
         {/* Image */}
-        <div className="relative h-40 overflow-hidden bg-gradient-to-br from-teal-600 to-teal-800">
+        <div className="relative h-36 sm:h-40 overflow-hidden bg-gradient-to-br from-teal-600 to-teal-800">
           <Image
             src={clinic.imageUrl ?? getClinicPhotoUrl(clinic.id, clinic.animalTypes)}
             alt={clinic.name}
@@ -48,10 +48,10 @@ export default function ClinicCard({ clinic }: ClinicCardProps) {
         </div>
 
         {/* Content */}
-        <div className="p-4">
+        <div className="p-3 sm:p-4">
           {/* Name + Price */}
           <div className="flex items-start justify-between gap-2">
-            <h3 className="font-semibold text-gray-900 group-hover:text-teal-700">
+            <h3 className="text-sm sm:text-base font-semibold text-gray-900 group-hover:text-teal-700">
               {clinic.name}
             </h3>
             <PriceBadge price={clinic.price} />

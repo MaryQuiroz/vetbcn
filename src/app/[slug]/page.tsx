@@ -65,19 +65,19 @@ export default async function ClinicDetailPage({ params }: PageProps) {
       <div className="mx-auto w-full max-w-5xl px-4 pt-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-teal-700 hover:text-teal-600"
+          className="inline-flex items-center gap-1 py-2 text-sm text-teal-700 hover:text-teal-600"
         >
           &larr; Volver al listado
         </Link>
       </div>
 
       {/* Hero */}
-      <section className="relative mt-4 flex h-64 items-end bg-gradient-to-br from-teal-600 to-teal-800 sm:h-72">
+      <section className="relative mt-4 flex h-48 items-end bg-gradient-to-br from-teal-600 to-teal-800 sm:h-64 md:h-72">
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-6xl opacity-20">🐾</span>
         </div>
         <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-6 sm:px-6 lg:px-8">
-          <h1 className="text-2xl font-bold text-white sm:text-3xl">
+          <h1 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
             {typedClinic.name}
           </h1>
           {typedClinic.isEmergency && (
@@ -89,7 +89,7 @@ export default async function ClinicDetailPage({ params }: PageProps) {
         {typedClinic.phone && (
           <a
             href={`tel:${typedClinic.phone}`}
-            className="absolute right-4 top-4 rounded-lg bg-white/90 px-4 py-2 text-sm font-medium text-teal-700 shadow transition-colors hover:bg-white sm:right-8"
+            className="absolute right-4 top-4 rounded-lg bg-white/90 px-4 py-3 text-sm font-medium text-teal-700 shadow transition-colors hover:bg-white sm:right-8"
           >
             📞 Llamar
           </a>

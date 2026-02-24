@@ -42,8 +42,8 @@ export default async function Home({ searchParams }: PageProps) {
       <Header />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-teal-50 to-white px-4 py-12 text-center sm:py-16">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+      <section className="bg-gradient-to-b from-teal-50 to-white px-4 py-10 text-center sm:py-16">
+        <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
           Encuentra el mejor
           <br />
           <span className="text-teal-700">veterinario de Barcelona</span>

@@ -9,10 +9,10 @@ interface Props {
 export default function Header({ onOpenFavorites, favoritesCount = 0 }: Props) {
   return (
     <header className="border-b border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl">🐾</span>
-          <span className="text-xl font-bold text-teal-700">VetBCN</span>
+          <span className="text-xl sm:text-2xl">🐾</span>
+          <span className="text-lg sm:text-xl font-bold text-teal-700">VetBCN</span>
         </Link>
         <div className="flex items-center gap-4">
           <p className="hidden text-sm text-gray-500 sm:block">
@@ -21,7 +21,7 @@ export default function Header({ onOpenFavorites, favoritesCount = 0 }: Props) {
           {onOpenFavorites && (
             <button
               onClick={onOpenFavorites}
-              className="relative rounded-full p-2 text-gray-500 hover:bg-gray-100 hover:text-red-500 transition-colors"
+              className="relative rounded-full p-2.5 text-gray-500 hover:bg-gray-100 hover:text-red-500 transition-colors"
               aria-label="Abrir favoritos"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5">

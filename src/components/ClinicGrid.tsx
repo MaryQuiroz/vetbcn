@@ -27,7 +27,7 @@ export default function ClinicGrid({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
       {clinics.map((clinic) => (
         <ClinicCard key={clinic.id} clinic={clinic} />
       ))}
